@@ -44,7 +44,6 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                     {
-
                     recipeList.map( (recipe) => {
                         const {_id, name, dateMade, under30Minutes, createdAt} = recipe;
                         return(
