@@ -16,13 +16,13 @@ const Edit = () => {
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/recipes/${recipe_id}`)
-        .then(res => {
-            console.log(res.data)
-            setName(res.data.name)
-            setDate(new Date(res.data.dateMade).toLocaleDateString('en-CA'))
-            setUnder30Mins(res.data.under30Minutes)
-        })
-        .catch(errors => console.log(errors))
+            .then(res => {
+                console.log(res.data)
+                setName(res.data.name)
+                setDate(new Date(res.data.dateMade).toLocaleDateString('en-CA'))
+                setUnder30Mins(res.data.under30Minutes)
+            })
+            .catch(errors => console.log(errors))
     }, [])
 
     const updateRecipe = (e) => {
